@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: rgb(225, 236, 222);
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+aside{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 2rem;
+}
+
+.menu{
+  width: 30rem;
+  height: 15rem;
+  background: rgb(255, 255, 255);;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: .6rem;
+  font-family: 'Kanit', sans-serif;
+  box-shadow: rgba(102, 255, 88, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.custom-game{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu .games{
+  padding: .8rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu .games i{
+  margin: 1rem;
+  border: 1px solid #333;
+  padding: .7rem 2.2rem;
+  font-size: 2rem;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.menu .games i:hover{
+  background: #eee;
+}
+
+.selected{
+  background: #eee;
+}
+
+.menu .btn-start:hover{
+  background: rgb(109, 208, 157);
+  color: rgb(250, 250, 250);
+}
+.menu .btn-start{
+  color: #fff;
+  font-size: 1.5rem;
+  padding: .8rem 3rem;
+  background: rgb(80, 157, 117);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Kanit', sans-serif;
+}
+
+.timer{
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background: rgb(248, 248, 248);
+  padding: .5rem 2.4rem;
+  color: #555;
+  font-size: 1.6rem;
+}
+
+.piece-cemetry{
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(8,3rem);
+  grid-auto-rows: 3rem;
+  margin: 1rem;
+  min-height: 3rem;
+}
+
+.piece-cemetry img{
+  width: 100%;
+  height: 100%;
+}
+
+.board{
+  width: 40rem;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-auto-rows: 5rem;
+}
+
+.square{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.square .piece{
+  width: 90%;
+  height: 90%;
+}
+
+.square img{
+  width: 100%;
+  height: 100%;
+}
+
+.legal-move::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:rgba(100, 189, 240, 0.306)!important;
+}
+
+.active-timer{
+  background: #333;
+  color: #eee;
+}
+
+/* TABLE */
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 0.9em;
+  max-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  width:100%;
+}
+
+table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+table th,
+table td {
+  padding: 12px 15px;
+}
+
+table tr {
+  border-bottom: 1px solid #dddddd;
+  color: #787878;
+}
+
+table tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+table tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+table tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+#table-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+#table-scroll {
+  height:100%;
+  overflow:scroll;  
+}
+#table-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 1200px) {
+  html{
+    font-size: 12px;
+  }
+  .board{
+    width: 30rem;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: calc(30rem / 8);
+  }
+  .menu{
+    width: 25rem;
+    height: 15rem;
+    background: rgb(255, 255, 255);;
+  }
+}
+@media screen and (max-width: 650px) {
+  html{
+    font-size: 8px;
+  }
+  .board{
+    width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: calc(80vw / 8);
+  }
+  .menu{
+    width: 25rem;
+    height: 15rem;
+    background: rgb(255, 255, 255);;
+  }
+  .container{
+    flex-direction: column;
+    align-items: center;
+  }
+}
