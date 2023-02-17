@@ -8,7 +8,7 @@ const INITIAL_SETUP = 'r n b q k b n r'
 const colKeys = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
 
 function Board({game, gameStart}) {
-  const [boardState, setBoardState] = useState(Array(NUM_OF_ROWS).fill(Array(NUM_OF_ROWS).fill(null)));
+  const [boardState, setBoardState] = useState(Array(NUM_OF_ROWS).fill(Array(NUM_OF_ROWS).fill(null))); //8x8 matrix representing pieces positions
   const [currentPiece, setCurrentPiece] = useState(null)
   const [currentLegalMoves, setCurrentLegalMoves] = useState([])
   const [playerTurn, setPlayerTurn] = useState('w')
@@ -78,7 +78,10 @@ function Board({game, gameStart}) {
     const currentPlayer = playerTurn === 'w' ? player_black:player_white;
     const isInCheck = (currentPlayer.isInCheck([player_white, player_black], board))
     const numOfLegalMoves = currentPlayer.getAllLegalMoves(board).length;
-    if(isInCheck && !numOfLegalMoves) alert(`${currentPlayer.color} checkmated`)
+    if(isInCheck && !numOfLegalMoves) {
+        alert(`${currentPlayer.color} checkmated`)
+        console.log(`${currentPlayer.color} checkmated`)
+    }
     if(!isInCheck && !numOfLegalMoves) alert(`STALEMATE`)
   }
 

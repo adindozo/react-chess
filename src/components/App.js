@@ -10,20 +10,20 @@ const player_black = new Player('b', 60);
 const player_white = new Player('w', 60);
 const game = {
     players: [player_white, player_black], 
-    updateHistoryFunction: null, 
+    updateHistoryFunction: null, //moveshistory component will hook function to this obj
     movesHistory: [],
 };
 
 function App() {
-    const [gameStart, setGameStart] = useState(false);
-    const [gameType, setGameType] = useState(60);
+    const [gameStart, setGameStart] = useState(false); //true if game is running
+    const [gameType, setGameType] = useState(60); //amount of time each player is given in seconds
 
     function startButton(){
         setGameStart(true);
         player_white.startTimer();
     }
 
-    useEffect(() => {
+    useEffect(() => { //whenever gameType changes, update timer of both players
         player_black.editTimer(gameType)
         player_white.editTimer(gameType)
     }, [gameType])

@@ -46,24 +46,21 @@ aside{
 }
 
 .menu .games{
-  padding: .8rem 2rem;
+  padding: 10px;
+  width: 150%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
-.menu .games i{
-  margin: 1rem;
-  border: 1px solid #333;
-  padding: .7rem 2.2rem;
-  font-size: 2rem;
-  border-radius: 2px;
-  cursor: pointer;
+.menu .games button{
+ padding: 10px;
 }
 
-.menu .games i:hover{
-  background: #eee;
-}
+.menu .games button:hover{
+    cursor: pointer;
+   }
+   
 
 .selected{
   background: #eee;
@@ -226,6 +223,9 @@ table tr.active-row {
   }
 }
 @media screen and (max-width: 650px) {
+    .menu .games{
+        width: 100%;
+    }
   html{
     font-size: 8px;
   }
