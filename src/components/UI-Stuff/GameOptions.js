@@ -5,6 +5,7 @@ const gameTypes = [60, 300, 600]
 export default function GameOptions({gameType, setGameType, startButton}){
     return (
         <div className="custom-game">
+        
             <div className="games">
                 <i className={`fas fa-brain ${gameType === gameTypes[0] ? 'selected': ''}`}
                 style={{color:'rgb(189, 125, 65)'}}
@@ -17,6 +18,7 @@ export default function GameOptions({gameType, setGameType, startButton}){
                 onClick={() => setGameType(gameTypes[2])}></i>
             </div>
             <button className="btn-start" onClick={() => startButton()}>PLAY</button>
+            <h1 className='credits'>Chess | Adin Đozo</h1>
         </div>
     )
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');* {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -21,8 +21,8 @@
 aside{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin-left: 2rem;
+  align-items: center;
+
 }
 
 .menu{
@@ -35,7 +35,7 @@ aside{
   justify-content: center;
   padding: .6rem;
   font-family: 'Kanit', sans-serif;
-  box-shadow: rgba(102, 255, 88, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border: 1px dashed rgba(51, 51, 51, 0.212);
 }
 
 .custom-game{
@@ -77,7 +77,7 @@ aside{
   color: #fff;
   font-size: 1.5rem;
   padding: .8rem 3rem;
-  background: rgb(80, 157, 117);
+  background: rgb(80, 146, 157);
   border-radius: 5px;
   border: none;
   cursor: pointer;
@@ -85,7 +85,8 @@ aside{
 }
 
 .timer{
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 100%;
+  box-shadow: rgba(0, 128, 255, 0.2) 0px 0px 5px;
   background: rgb(248, 248, 248);
   padding: .5rem 2.4rem;
   color: #555;
@@ -151,14 +152,13 @@ table {
   margin: 0 auto;
   font-size: 0.9em;
   max-width: 400px;
-  border-radius: 5px 5px 0 0;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   width:100%;
 }
 
 table thead tr {
-  background-color: #009879;
+  background-color: #333;
   color: #ffffff;
   text-align: left;
   font-weight: bold;
@@ -178,12 +178,12 @@ table tr:nth-of-type(even) {
 }
 
 table tr:last-of-type {
-  border-bottom: 2px solid #009879;
+  border-bottom: 2px solid #000000;
 }
 
 table tr.active-row {
   font-weight: bold;
-  color: #009879;
+  color: #000000;
 }
 
 #table-wrapper {
@@ -197,6 +197,13 @@ table tr.active-row {
 }
 #table-scroll::-webkit-scrollbar {
   display: none;
+}
+
+.credits{
+    opacity: .5;
+    text-align: right;
+    font-size: 14px;
+    margin-top: 20px;
 }
 
 
