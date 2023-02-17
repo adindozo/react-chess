@@ -5,6 +5,7 @@ const gameTypes = [60, 300, 600]
 export default function GameOptions({ gameType, setGameType, startButton }) {
     return (
         <div className="custom-game">
+        
             <div className="games">
                 <button onClick={() => setGameType(gameTypes[0])}>1min</button>
                 <button onClick={() => setGameType(gameTypes[1])}>5min</button>
@@ -12,6 +13,7 @@ export default function GameOptions({ gameType, setGameType, startButton }) {
 
             </div>
             <button className="btn-start" onClick={() => startButton()}>PLAY</button>
+            <h1 className='credits'>Chess | Adin Đozo</h1>
         </div>
     )
 }

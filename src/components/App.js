@@ -30,8 +30,6 @@ function App() {
 
     return (
         <div className="container">
-            <Board game={game} gameStart={gameStart} />
-
             <aside>
                 <PieceCemetery player = {player_black} />
                 <PlayerTimer player={player_black} className="player-black"/>
@@ -47,6 +45,7 @@ function App() {
                 <PlayerTimer player={player_white} className="player-white"/>
                 <PieceCemetery player = {player_white} />
             </aside>
+            {gameStart ? <Board game={game} gameStart={gameStart} />:''/*show board only if game started*/}
         </div>
     )
 }
