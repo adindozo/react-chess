@@ -1,5 +1,5 @@
 # react-chess
-A chess game built using React.js.
+Chess game built using React.js.
 
 
 -Legal movement highlight on board
