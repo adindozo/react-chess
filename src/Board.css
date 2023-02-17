@@ -35,7 +35,6 @@ aside{
   justify-content: center;
   padding: .6rem;
   font-family: 'Kanit', sans-serif;
-  box-shadow: rgba(102, 255, 88, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .custom-game{
@@ -46,24 +45,21 @@ aside{
 }
 
 .menu .games{
-  padding: .8rem 2rem;
+  padding: 10px;
+  width: 150%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
-.menu .games i{
-  margin: 1rem;
-  border: 1px solid #333;
-  padding: .7rem 2.2rem;
-  font-size: 2rem;
-  border-radius: 2px;
-  cursor: pointer;
+.menu .games button{
+ padding: 10px;
 }
 
-.menu .games i:hover{
-  background: #eee;
-}
+.menu .games button:hover{
+    cursor: pointer;
+   }
+   
 
 .selected{
   background: #eee;
@@ -85,7 +81,7 @@ aside{
 }
 
 .timer{
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(0, 128, 255, 0.2) 0px 8px 24px;
   background: rgb(248, 248, 248);
   padding: .5rem 2.4rem;
   color: #555;
@@ -219,6 +215,9 @@ table tr.active-row {
   }
 }
 @media screen and (max-width: 650px) {
+    .menu .games{
+        width: 100%;
+    }
   html{
     font-size: 8px;
   }

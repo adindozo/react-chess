@@ -3,8 +3,8 @@ import {toHumanTime} from './utilities/helpers'
 
 export default class Player {
     constructor(color, time=60, alivePieces=[]){
-        this.color = color;
-        this.time = time;
+        this.color = color; //b / w
+        this.time = time; //time in s
         this.alivePieces = alivePieces; 
         this.castled = false;
         this.inCheck = false;
